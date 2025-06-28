@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polyrhythm DVD Player</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <!--
+    - Take 2 inputs from the user, as numbers
+    - Play a DVD logo animation 
+    -->
+
+    <body>
+        <main>
+            <h1>This is my polyrhythm DVD player</h1>
+            <p>This project takes 2 numbers numbers as input and plays a DVD-logo-style animation to visually demonstrate polyrhythms!</p>
+            <!--W+H must be greater than 102-->
+            <!-- Formula: ((50 + (X * 50)) : (50 + (Y * 50))) = X : Y -->
+            <canvas id="canvas" class="myCanvas">
+                The canvas is not loading.
+            </canvas>
+
+           
+
+            <!-- <div class="wrapper">
+                
+                <div id ="animation" class="myAnimation"></div>
+            </div> -->
+            <div class="counters">
+                <div class="ratio">
+                    <p id="count-x" class="ratio">0</p> : <div class="ratio"><p id="count-y" class="ratio">0</p></div>
+                </div>
+                <div class="cycles">
+                    Cycles: <p id="hits" class="cycles">0</p>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="scripts.js"></script>
+
+</html>

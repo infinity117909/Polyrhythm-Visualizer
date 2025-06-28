@@ -1,0 +1,23 @@
+canvas {
+  
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.counters {
+  margin-top: 10px;
+  font-size: 32px;
+
+  div > p {
+    display: inline;
+  };
+}
+
+.ratio {
+  display: inline;
+}

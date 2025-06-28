@@ -5,29 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Polyrhythm DVD Player</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
     </head>
 
     <!--
     - Take 2 inputs from the user, as numbers
-    - Play a DVD logo animation 
     -->
 
     <body>
         <main>
-            <h1>This is my polyrhythm DVD player</h1>
+            <h1 class="main-header">Polyrhythm Visualizer</h1>
             <p>This project takes 2 numbers numbers as input and plays a DVD-logo-style animation to visually demonstrate polyrhythms!</p>
-            <!--W+H must be greater than 102-->
-            <!-- Formula: ((50 + (X * 50)) : (50 + (Y * 50))) = X : Y -->
             <canvas id="canvas" class="myCanvas">
                 The canvas is not loading.
             </canvas>
 
-           
+            <?php?>
 
-            <!-- <div class="wrapper">
-                
-                <div id ="animation" class="myAnimation"></div>
-            </div> -->
+            <h6 class="directions">Please enter the polyrhythm ratio in the following boxes:</h6>
+            <p class="directions">This default example will show the 3:4 polyrhythm</p>
+
+            <div class="wrapper">
+                <input class="polyrhythm" type="text" id='poly-x' name="poly-x" placeholder="3" required />
+                <h1 class="colon">:</h1>
+                <input class="polyrhythm" type="text" id='poly-y' name="poly-y" placeholder="4" required />
+            </div>
+
+            <button type="submit" id="submit-button" onclick="calculatePolyrhythm()">Calculate</button>
+
+            <!--Format this-->
+            <button onclick="draw();">Draw the polyrhythm</button>
+            
+           
             <div class="counters">
                 <div class="ratio">
                     <p id="count-x" class="ratio">0</p> : <div class="ratio"><p id="count-y" class="ratio">0</p></div>

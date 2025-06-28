@@ -1,12 +1,45 @@
+h1,
+p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Sixtyfour Convergence";
+  font-size: 60px;
+}
+
+.colon {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 canvas {
-  
   border: 1px solid black;
+  /* 
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  border-left: 2px solid blue;
+  border-right: 2px solid blue; 
+  Make these flash when the ball hits the sides
+  */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+.directions {
+  display: block;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px auto 0 auto;
+  font-size: 12px;
+  font-weight: 100;
+  width: 300px;
 }
 
 .counters {
@@ -16,8 +49,39 @@ canvas {
   div > p {
     display: inline;
   };
+
+  .ratio {
+    display: inline;
+  }
 }
 
-.ratio {
-  display: inline;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .polyrhythm {
+    width: 50px;
+    height: 50px;
+    padding: auto;
+    text-align:center;
+    font-size: 36px;
+    margin: 10px;
+  }
+
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type='submit'] {
+  display: flex;
+  margin: 10px auto;
+  width: 100px;
+  height: 25px;
 }

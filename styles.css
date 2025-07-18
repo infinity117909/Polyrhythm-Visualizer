@@ -18,8 +18,9 @@ canvas {
   display: flex;
   margin: 0 auto;
   background-color: rgb(243, 243, 243); 
-  max-width: 60vw;
-  min-width: 50vw;
+  max-width: 80vw;
+  max-height: 60vh;
+  min-width: 10vw;
 }
 
 .colon {

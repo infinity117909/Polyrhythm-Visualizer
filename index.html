@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
     <!--
@@ -22,33 +23,34 @@
                 The canvas is not loading.
             </canvas>
 
-            <?php?>
-
             <h6 class="directions">Please enter the polyrhythm ratio in the following boxes:</h6>
             <p class="directions">This default example will show the 3:4 polyrhythm</p>
 
             <div class="wrapper">
                 <input class="polyrhythm" type="text" id='poly-x' name="poly-x" placeholder="3" required />
-                <h1 class="colon">:</h1>
+                <h2 class="colon">:</h2>
                 <input class="polyrhythm" type="text" id='poly-y' name="poly-y" placeholder="4" required />
             </div>
+            <button class="calculate" id="calculate" type="submit" id="submit-button" onclick="calculatePolyrhythm()">Calculate Polyrhythm</button>
 
-            <button type="submit" id="submit-button" onclick="calculatePolyrhythm()">Calculate</button>
-
-            <!--Format this-->
-            <button onclick="draw();">Draw the polyrhythm</button>
+            <div class="pausePlay">
+                <button class="UI" id="start" onclick="Click(metronome1); draw();"><span class="material-icons" style="font-size: 50px;">play_arrow</span></button>
+                
+                <button class="UI" id="stop" onclick="stopPolyrhythm()"><span class="material-icons" style="font-size: 50px;">stop</span></button>
+            </div>
             
-           
-            <div class="counters">
+            
+            <!-- <div class="counters">
                 <div class="ratio">
                     <p id="count-x" class="ratio">0</p> : <div class="ratio"><p id="count-y" class="ratio">0</p></div>
                 </div>
                 <div class="cycles">
                     Cycles: <p id="hits" class="cycles">0</p>
                 </div>
-            </div>
+            </div> -->
         </main>
-    </body>
-    <script src="scripts.js"></script>
+        <script src="scripts.js"></script>
+    </body>    
+    
 
 </html>
